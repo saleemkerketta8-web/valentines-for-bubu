@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>She Said YES 💍💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe0ec, #fff);
+  text-align: center;
+  color: #444;
+  overflow: hidden;
+}
+
+h1 {
+  color: #ff4d88;
+  font-size: 3rem;
+  margin-top: 60px;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+.card {
+  background: white;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.ring {
+  font-size: 70px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  bottom: -20px;
+  font-size: 24px;
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-100vh); opacity: 0; }
+}
+
+button {
+  background: #ff4d88;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(255,77,136,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<h1>She Said YES 💍💖</h1>
+<h2>And my heart chose you forever 🥺✨</h2>
+
+<div class="card">
+  <div class="ring">💍</div>
+  
+  <p>
+    This moment is etched into my soul forever 🤍. When you said yes, the world paused, my heart raced, and everything else faded into the background. In that single second, time felt different—slower, softer, and infinitely more meaningful. It wasn’t just an answer you gave me; it was a promise, a beginning, a doorway into a future I now see so clearly with you in it ♾️💞. I felt the weight of the moment settle gently into my heart, and I knew without a doubt that this was the start of us, alwaysWhen you said yes, it felt like the universe quietly smiled. All the moments that led us here—the conversations, the laughter, the struggles, the patience—suddenly made perfect sense. Every step, every delay, every lesson was worth it, because it brought me to this exact heartbeat shared between us 🥹🤍. Your yes didn’t just make me happy; it made me feel chosen, seen, and deeply loved in a way I will carry forever.
+I promise to love you loudly on the happy days 💕. When you are glowing with joy, laughing freely, and celebrating life, I will be right there beside you—cheering, smiling, and falling in love with you all over again. I will celebrate your victories, your dreams, and every little moment that makes your eyes light up. Your happiness will always feel like my greatest success, and your smile will always be my favorite sight 🌟.
+</p>
+  <p>
+    Thank you for choosing me.  
+    I choose you—today, tomorrow, and forever 🥹💍
+  </p>
+
+  <button onclick="alert('Forever starts now 💖')">Forever & Always ♾️</button>
+</div>
+
+<div class="hearts" id="hearts"></div>
+
+<script>
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+  document.getElementById("hearts").appendChild(heart);
+  setTimeout(() => heart.remove(), 6000);
+}
+setInterval(createHeart, 350);
+</script>
+
+</body>
+</html>
